@@ -414,10 +414,13 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Word Recommendation System</h2>
+                            <h2>EOD Batch Processor</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/mshadoop.png" class="img-responsive img-centered" alt="">
-                            <p>I designed a word recommendation system using the test data from 340000 webdocs, using the Apriori algorithm on transactional data in partial fulfilment of the Data Mining course. The system ran on a 4-node cluster using Hadoop.</p>
+                            <p>We designed a Spark based distributed EOD batch system to process a loan book of $42B daily. The system was developed keeping modularity in mind to be able to support multiple data sources.</p>
+                            The framework comprised of 5 parts : <ul><li>Ingestion</li><li>Pre-Processor</li><li>Processor</li><li>Extractor</li><li>Recon</li></ul>
+                            <p>The <b>Ingestion</b> part was designed to consolidate and compile data from mulitple sources, including flatfiles and tables. <b>Extractor</b> was then responsible to generate EOD feed files that fed into a Margin system. <b>Recon</b> was writtn using KDB+/Q that enabled us to do fast and customized comparison to ensure consistency with the esiting systems.</p>
+                            <p>Overall the system could process the entire book in an average time of 25 minutes, down from the existing 6 hour process.</p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
